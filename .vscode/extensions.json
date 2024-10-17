@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "jnoortheen.nix-ide",
+        "arrterian.nix-env-selector",
+        "mkhl.direnv",
+
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "fill-labs.dependi",
+
+        "vadimcn.vscode-lldb",
+        "swellaby.vscode-rust-test-adapter"
+    ]
+}

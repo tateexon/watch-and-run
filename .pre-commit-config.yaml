@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/tateexon/pre-commit-hooks
+    rev: f3a26e1675b64927002fd342228e64de8d43e0fa # v0.0.2
+    hooks:
+      - id: detect-typos
+      - id: rust-lint
+      - id: rust-fmt
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 2c9f875913ee60ca25ce70243dc24d5b6415598c # v4.6.0
+    hooks:
+      - id: detect-private-key
+      - id: detect-aws-credentials
+        args: [--allow-missing-credentials]
+      - id: check-added-large-files
+      - id: check-json
+      - id: check-toml
+      - id: end-of-file-fixer
+      - id: check-case-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+  - repo: local
+    hooks:
+      - id: run-unit-tests
+        name: Run unit tests
+        entry: ./.githooks/run-unit-tests.sh
+        language: script
+        pass_filenames: false
+        stages: [pre-push]
