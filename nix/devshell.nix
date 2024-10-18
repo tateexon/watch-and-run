@@ -9,7 +9,7 @@ mkShell {
   nativeBuildInputs = [
     # basics
     bash
-    git
+    # git
     curl
     gnumake
     jq
